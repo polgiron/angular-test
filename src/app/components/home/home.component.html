@@ -1,0 +1,19 @@
+<ul class="pages">
+  <li *ngFor="let page of pagesToDisplay; let i = index" class="page page--{{page.color}}" [ngStyle]="{transform: 'translate3d(' + page.translation + 'vw, ' + (i * 4) + 'vh, 0) rotate(' + page.rotation + 'deg)'}">
+    <h1>{{page.title}}</h1>
+    <div class="button-wrapper">
+      <button class="button" (click)="goToPage(1)">Go to page 1</button>
+      <button class="button" (click)="goToPage(2)">Go to page 2</button>
+      <button class="button" (click)="goToPage(3)">Go to page 3</button>
+    </div>
+  </li>
+  <!-- <li class="page page--red">
+    <h1>Non</h1>
+  </li>
+  <li class="page page--yellow">
+    <h1>Ouai</h1>
+  </li>
+  <li class="page page--green">
+    <h1>Coucou ca va?</h1>
+  </li> -->
+</ul>
